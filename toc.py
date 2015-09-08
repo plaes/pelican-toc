@@ -121,6 +121,7 @@ def generate_toc(content):
     if (settoc):
         tree_string = '{}'.format(tree)
         content.toc = BeautifulSoup(tree_string, 'html.parser').decode(formatter='html')
+        content.toctree = tree
     content._content = soup.decode(formatter='html')
 
 
